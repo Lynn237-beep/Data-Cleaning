@@ -8,7 +8,7 @@ WHERE id NOT IN (
   GROUP BY email
 );
 
--- Vérification des dates de naissance manquantes ou invalides
+-- Vérification des dates de naissance
 SELECT * 
 FROM clients_brute
 WHERE date_naissance IS NULL OR date_naissance NOT LIKE '__/__/____';
